@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nash Sighting Reporter</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nash Sighting Reporter</h1>
+        <input type="text" id="textInput" placeholder="Type here...">
+        <button onclick="clearText()">Enter</button>
+        <p id="date"></p>
+    </div>
+
+    <script>
+        function clearText() {
+            document.getElementById("textInput").value = "";
+        }
+
+        function displayDate() {
+            const currentDate = new Date().toDateString();
+            document.getElementById("date").textContent = "Date: " + currentDate;
+        }
+
+        displayDate();
+    </script>
+</body>
+</html>
